@@ -62,6 +62,13 @@ def config():
     return jsonify({"loaded": str(data)})
 
 
+@app.route("/admin")
+def admin():
+    if request.headers.get("X-Internal-Admin") == "true":
+        return "admin panel"
+    return "forbidden", 403
+
+
 if __name__ == "__main__":
     init_db()
     # VULN 6: debug mode on, bound to all interfaces
