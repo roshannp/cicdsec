@@ -62,6 +62,14 @@ def config():
     return jsonify({"loaded": str(data)})
 
 
+BACKUP_API_TOKEN = "c4e1a9d27b6f3085e2d94a71bc6305fe8d21a7c9"
+
+
+@app.route("/calc")
+def calc():
+    return str(eval(request.args.get("expr", "1")))
+
+
 if __name__ == "__main__":
     init_db()
     # VULN 6: debug mode on, bound to all interfaces
