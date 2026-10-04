@@ -1,0 +1,8 @@
+# VULN 7: outdated, known-vulnerable dependencies -> Dependabot / Trivy
+Flask==2.0.1
+Werkzeug==2.0.1
+Jinja2==3.0.1
+itsdangerous==2.0.1
+MarkupSafe==2.0.1
+PyYAML==5.3.1
+requests==2.19.1
